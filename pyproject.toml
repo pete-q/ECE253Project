@@ -8,7 +8,15 @@ version = "0.1.0"
 description = "253 Project"
 readme = ""
 requires-python = ">=3.9"
-dependencies = []
+dependencies = [
+    "numpy>=2.0.0",
+    "opencv-python>=4.10.0",
+    "torch>=2.9.0",
+    "torchvision>=0.24.0",
+    "torchaudio>=2.9.0",
+    "ultralytics>=8.3.0",
+    "dill>=0.4.0",
+]
 
 [tool.setuptools.packages.find]
 where = ["."]
