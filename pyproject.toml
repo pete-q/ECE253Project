@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "project253"
-version = "0.1.0"
-description = "253 Project"
-readme = ""
+version = "1.0.0"
+description = "Video Enhancement for Object Detection in Adverse Conditions"
+readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
     "numpy>=2.0.0",
@@ -20,7 +20,7 @@ dependencies = [
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["DIP", "utils", "validation"]
+include = ["src", "src.dip", "src.utils"]
 
 
 
