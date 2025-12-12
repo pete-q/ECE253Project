@@ -84,10 +84,15 @@ jupyter notebook
 # Run all cells to process videos and see results
 ```
 
+**Note**: Notebooks include automatic path setup to find the `src` module. If you still get import errors, install the package:
+```bash
+pip install -e .
+```
+
 **Option 2: Python Script**
 ```bash
+cd 253_Project  # Make sure you're in project root
 python scripts/process_lowlight_yolo.py
-# Update paths in script if needed
 ```
 
 **Output**: All processed videos saved to `output/` with YOLO detections, track IDs, and vehicle counts
@@ -134,7 +139,7 @@ Watch output videos in `output/` folder to assess detection quality, tracking st
 
 | Issue | Solution |
 |-------|----------|
-| Import errors | Run `pip install -e .` from project root |
+| `ModuleNotFoundError: No module named 'src'` | Notebooks auto-fix this. If issue persists: run `pip install -e .` from project root |
 | Videos won't display | Wait 30s, clear outputs, or open from `output/` folder |
 | GPU out of memory | Reduce `imgsz=480`, use `device='cpu'`, or process shorter videos |
 | Slow processing | Enable `half=True`, reduce `imgsz`, use smaller model (yolov8n.pt) |
