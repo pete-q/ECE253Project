@@ -102,7 +102,7 @@ python scripts/process_lowlight_yolo.py
 | Type | Method | Description |
 |------|--------|-------------|
 | **Rain Removal** | R1 | Temporal median filtering + bilateral filter |
-| | R2 | Frequency-based rain attenuation |
+| | R2 | Base-detail decomposition with detail attenuation |
 | **Fog Removal** | F1 | Dark Channel Prior dehazing |
 | | F2 | CLAHE + color correction in LAB space |
 | **Low-Light** | L1 | CLAHE in YCrCb color space |
